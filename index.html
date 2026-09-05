@@ -87,34 +87,62 @@
         </div>
 
         <div class="demo-panel">
-          <p>
-            아래 버튼은 실행 환경을 확인하기 위한 예시입니다.
-            프로젝트를 시작하면 이 영역을 팀의 핵심 기능으로
-            교체하세요.
-          </p>
-
-          <div class="action-area">
-            <button id="start-button" type="button">
-              실행 확인
-            </button>
-
-            <button
-              id="reset-button"
-              class="secondary-button"
-              type="button"
-            >
-              초기화
-            </button>
+          <div class="game-intro">
+            <div>
+              <p class="eyebrow">STAGE 01 · 명확하게 말하기</p>
+              <h3>로봇에게 열쇠까지 가는 프로그램을 지시하세요</h3>
+              <p>왼쪽과 오른쪽은 화면 기준이 아니라 로봇이 바라보는 방향 기준입니다. 한 줄씩 정확한 문법으로 작성한 뒤 실행해 보세요.</p>
+            </div>
+            <div class="game-stats" aria-label="게임 통계">
+              <span><strong id="step-count">0</strong><small>실행 횟수</small></span>
+              <span><strong id="ambiguity-count">0</strong><small>모호한 명령</small></span>
+            </div>
           </div>
 
-          <div
-            id="result"
-            class="result-box"
-            role="status"
-            aria-live="polite"
-          >
-            버튼을 누르면 결과가 이곳에 표시됩니다.
+          <div class="game-layout">
+            <div class="board-wrap">
+              <div id="game-board" class="game-board" role="grid" aria-label="15 곱하기 15 퍼즐 맵"></div>
+              <div class="legend" aria-label="맵 범례">
+                <span><i class="legend-dot robot-dot"></i>로봇</span>
+                <span><i class="legend-dot key-dot"></i>열쇠</span>
+                <span><i class="legend-dot wall-dot"></i>벽</span>
+                <span><i class="legend-dot box-dot"></i>박스</span>
+                <span><i class="legend-dot pit-dot"></i>구덩이</span>
+                <span><i class="legend-dot hazard-dot"></i>톱날</span>
+              </div>
+            </div>
+
+            <div class="command-panel">
+              <label for="command-input">명령 프로그램 · 자연어도 AI가 판정</label>
+              <textarea id="command-input" rows="8" spellcheck="false">2칸 전진해.
+오른쪽으로 돌아.
+3칸 전진해.</textarea>
+              <div class="ai-command-row">
+                <input id="ai-command-input" type="text" placeholder="예: 벽을 만나면 오른쪽으로 돌아서 열쇠로 가줘" aria-label="AI에게 해석할 자연어 명령" />
+                <button id="ai-button" class="ai-button" type="button">✦ 문장 다듬기</button>
+              </div>
+              <p class="ai-note">문장 다듬기는 표현만 정리합니다. 실행할 때 AI가 반복·조건 행동으로 해석합니다.</p>
+              <div class="command-help">
+                <span>예시 문법</span>
+                <code>2칸 전진해.</code>
+                <code>오른쪽으로 돌아.</code>
+                <code>정면에 벽이 있으면 오른쪽으로 돌아.</code>
+              </div>
+              <div class="action-area">
+                <button id="start-button" type="button">▶ 프로그램 실행 · AI 판정</button>
+                <button id="reset-button" class="secondary-button" type="button">↺ 다시 시작</button>
+                <button id="hint-button" class="secondary-button" type="button">💡 힌트</button>
+                <button id="skip-button" class="ghost-button" type="button">건너뛰기</button>
+                <button id="new-stage-button" class="ghost-button" type="button">⤨ 랜덤 맵</button>
+              </div>
+            </div>
           </div>
+
+          <div class="log-header">
+            <h3>실행 로그</h3>
+            <span id="result" role="status" aria-live="polite">명령을 입력하고 실행 버튼을 눌러 보세요.</span>
+          </div>
+          <div id="execution-log" class="execution-log" aria-live="polite"></div>
         </div>
       </section>
 
