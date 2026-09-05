@@ -1,0 +1,4 @@
+module.exports = {
+  GEMINI_API_KEY: "your key here",
+  GEMINI_MODEL: "gemini-3.6-flash",
+};
