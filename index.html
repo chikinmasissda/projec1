@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="AI.SW 부천연합해커톤 팀 프로젝트"
+    />
+
+    <title>우리 팀의 무해한 AI 프로젝트</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="event-name">AI.SW 부천연합해커톤</p>
+
+        <h1 id="project-title">우리 팀의 프로젝트</h1>
+
+        <p class="theme">
+          AI와 미래의 공존:
+          <strong>무한한 상상, 무해한 AI</strong>
+        </p>
+
+        <p id="project-summary" class="project-summary">
+          이 문장을 우리 팀의 프로젝트 소개로 변경해 주세요.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="project-info" aria-labelledby="project-info-title">
+        <h2 id="project-info-title">프로젝트 한눈에 보기</h2>
+
+        <div class="card-grid">
+          <article class="info-card">
+            <span class="card-icon" aria-hidden="true">👤</span>
+            <h3>대상 사용자</h3>
+            <p id="target-user">
+              이 앱을 사용할 사람을 작성하세요.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-icon" aria-hidden="true">💡</span>
+            <h3>해결할 문제</h3>
+            <p id="problem">
+              사용자가 겪는 문제를 작성하세요.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-icon" aria-hidden="true">🤖</span>
+            <h3>AI의 역할</h3>
+            <p id="ai-role">
+              AI 또는 AI적 요소가 어떤 도움을 주는지 작성하세요.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <span class="card-icon" aria-hidden="true">🛡️</span>
+            <h3>무해한 설계</h3>
+            <p id="safety-design">
+              위험, 차별, 개인정보 문제를 어떻게 예방하는지 작성하세요.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo-section" aria-labelledby="demo-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">MVP DEMO</p>
+            <h2 id="demo-title">핵심 기능 시연 영역</h2>
+          </div>
+
+          <span id="app-status" class="status-badge">
+            시작 준비
+          </span>
+        </div>
+
+        <div class="demo-panel">
+          <p>
+            아래 버튼은 실행 환경을 확인하기 위한 예시입니다.
+            프로젝트를 시작하면 이 영역을 팀의 핵심 기능으로
+            교체하세요.
+          </p>
+
+          <div class="action-area">
+            <button id="start-button" type="button">
+              실행 확인
+            </button>
+
+            <button
+              id="reset-button"
+              class="secondary-button"
+              type="button"
+            >
+              초기화
+            </button>
+          </div>
+
+          <div
+            id="result"
+            class="result-box"
+            role="status"
+            aria-live="polite"
+          >
+            버튼을 누르면 결과가 이곳에 표시됩니다.
+          </div>
+        </div>
+      </section>
+
+      <section class="principles" aria-labelledby="principles-title">
+        <h2 id="principles-title">우리 팀의 AI 공존 원칙</h2>
+
+        <ul>
+          <li>
+            AI의 결과를 정답으로 강요하지 않고 사용자가 최종적으로
+            선택할 수 있게 합니다.
+          </li>
+          <li>
+            이름, 연락처, 비밀번호 등 개인정보를 수집하지 않습니다.
+          </li>
+          <li>
+            사람을 차별하거나 상처 주는 결과가 나오지 않도록
+            테스트합니다.
+          </li>
+          <li>
+            AI 또는 규칙 기반 판단의 한계를 사용자에게 알려 줍니다.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>AI.SW 부천연합해커톤</p>
+        <p>무한한 상상 · 무해한 AI</p>
+      </div>
+    </footer>
+  </body>
+</html>

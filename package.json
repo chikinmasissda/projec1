@@ -1,0 +1,12 @@
+{
+  "name": "bucheon-ai-hackathon-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI.SW 부천연합해커톤 오후 팀 프로젝트용 정적 웹 스타터",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
